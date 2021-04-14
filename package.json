@@ -1,0 +1,27 @@
+{
+  "name": "ManageImages",
+  "version": "1.0.0",
+  "description": "Manage Images",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/src",
+    "server": "nodemon backend/src",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diennguyen99/Manage-Images.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diennguyen99/Manage-Images/issues"
+  },
+  "homepage": "https://github.com/diennguyen99/Manage-Images#readme",
+  "dependencies": {
+    "concurrently": "^6.0.2"
+  }
+}
